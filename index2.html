@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/249f1b8630.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        ul li {
+            list-style: none;
+            font-size: 17px;
+            padding: 12px 8px 12px 50px;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+        }
+        ul li::before {
+            content: '';
+            position: absolute;
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            background-image: url('images/unchecked.png');
+            background-size: cover;
+            background-position: center;
+            top: 12px;
+            left: 8px;
+        }
+        ul li.checked {
+            text-decoration: line-through;
+            color: #555;
+        }
+        ul li.checked::before {
+            background-image: url('images/checked.png');
+        }
+        ul li span {
+            position: absolute;
+            right: 0;
+            top: 5px;
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+            color: #555;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        ul li span:hover {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-[#1C367B] to-[#38114C]">
+    <section class=" h-svh flex items-center">
+        <div class="bg-white p-8 space-y-6 w-[414px] m-auto rounded-xl">
+            <h1 class="text-xl gap-2 font-medium flex items-center">To Do List <img src="images/icon.png" alt=""
+                    class="w-8"></h1>
+            <div class="flex relative">
+                <input id="input-field" type="text" class="p-3 mt-0 bg-[#EBEDEE] rounded-full pl-8 w-full outline-none"
+                    placeholder="Add your task">
+                <button onclick="addTask()" id="btn"
+                    class="btn bg-[#FF6338] rounded-full px-10 font-medium text-white absolute right-0 h-full hover:bg-red-400 cursor-pointer">Add</button>
+            </div>
+            <ul id="list-container">
+
+            </ul>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script src="js/js2.js"></script>
+</body>
+
+</html>

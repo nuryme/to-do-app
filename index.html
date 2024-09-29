@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/249f1b8630.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="bg-gradient-to-br from-[#202c4e] to-[#39104A]">
-    <div class="bg-white p-8 space-y-6">
-        <label for="">To Do List <i class="fa-solid fa-book"></i></label>
-        <input type="text" class="p-4">
-        <button>Add</button>
-    </div>
-    
+
+<body class="bg-gradient-to-r from-[#1C367B] to-[#38114C]">
+    <section class=" h-svh flex items-center">
+        <div class="bg-white p-8 space-y-6 w-[414px] m-auto rounded-xl">
+            <label for="" class="block">To Do List <i class="fa-solid fa-book"></i></label>
+            <div class="flex relative">
+                <input id="input-field" type="text" class="p-3 mt-0 bg-[#EBEDEE] rounded-full pl-8 w-full outline-none" placeholder="Add your task">
+                <button id="btn" class="btn bg-[#FF6338] rounded-full px-10 font-medium text-white absolute right-0 h-full hover:bg-red-400 cursor-pointer">Add</button>
+            </div>
+            <div id="list-container">
+                <table id="table" class="w-full">
+
+                </table>
+            </div>
+        </div>
+    </section>
+
 
 
 
@@ -22,4 +34,5 @@
 
     <script src="js/js.js"></script>
 </body>
+
 </html>
